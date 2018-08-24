@@ -1,0 +1,55 @@
+<HTML>
+<head>
+    <link rel='stylesheet' href='star.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.3.0/css-doodle.min.js"></script>
+</head>
+<body>
+    <css-doodle grid="14">
+  
+        :doodle {
+            size: 100vmin;
+            perspective: 00px;
+        }
+        
+        clip-path: @shape(star);
+        will-change: transform; 
+        background: hsla(
+            calc(320 + @index() * 2), 80%, 60%, 
+            @rand(.1, .8) 
+        );    
+        
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-duration: @rand(5s, 16s, .1);
+        
+        --tz: @rand(10vmax, 80vmax);
+        --rt: @rand(120deg, 220deg);
+        
+        @odd {
+            animation-name: r-odd;
+            transform: rotateY(0) translateZ(var(--tz));
+        }
+        
+        @even {
+            animation-name: r-even;
+            transform: 
+            rotateZ(var(--rt)) rotateY(0) 
+            translateZ(var(--tz));
+        } 
+        
+        @keyframes r-odd {
+            to { transform: 
+            rotateY(1turn) translateZ(var(--tz));
+            }
+        }
+        
+        @keyframes r-even {
+            to { transform: 
+            rotateZ(var(--rt)) rotateY(1turn) 
+            translateZ(var(--tz));
+            }
+        }  
+    </css-doodle>
+    <script src="star.js"></script>
+</body>
+</HTML>
