@@ -1,0 +1,13 @@
+.ml15 {
+  font-weight: 800;
+  letter-spacing: 0.5em;
+	color : #333;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
+.simeio {
+	font-size: 4.5em;
+}
