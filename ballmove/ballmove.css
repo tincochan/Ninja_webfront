@@ -1,0 +1,22 @@
+#field {
+  position: relative;
+  perspective: 500px;
+}
+
+body {
+  background-color: #8a0653e3;
+  overflow:hidden;
+}
+
+.ball, #center {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 0.5em;
+  background-color:#fdfdfd;
+}
+
+#center{
+  
+  background-color: #ffee06f1;
+}
