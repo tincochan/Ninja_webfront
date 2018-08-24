@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  background: url("http://timothypoon.com/blog/wp-content/uploads/2011/01/canvas-particle-2.png") no-repeat;
+}
+
+.container {
+  width: 100%;
+  padding: 5% 50% 50% 50%;
+  display: block;
+}
+
+.moon {
+  background: inherit;
+  position: relative;
+  height: 16em;
+  width: 16em;
+  border-radius: 50%;
+  box-shadow: -4em 0.5em  0 1em rgb(203, 198, 198), -6em 0 3em rgba(108, 6, 74, 0.678);
+  transform: rotate(-30deg) translateX(3em);
+  margin-bottom: 15%;
+}
