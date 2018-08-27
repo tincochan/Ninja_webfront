@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+
+    html, body{
+        position:relative;
+        width:100%;
+        height:100%;
+        margin:0;
+        background: rgb(90, 3, 3);
+        overflow : hidden;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    }
+
+    .f {
+        font-size: 0.8em;
+        position: fixed;
+        top: 5px;
+        right: 10px;
+        color : #f1e1ab;
+    }
+
+    .f a {
+        color : #C9F0FF;
+    }
+
+    header {
+        position : absolute;
+        top:50%;
+        transform:translateY(-50%);
+    }
+
+    h1, h2 {
+        margin : 0 1rem;
+        white-space: nowrap;
+    }
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        color : rgb(250, 250, 248);
+        font-size : 8em;
+        font-weight : bold;
+        text-transform : uppercase;
+        animation : translate1 3s infinite;
+    }
+
+    h2 {
+        position : absolute;
+        top : 50%;
+        right : 5%;
+        color : #e6f32b;
+        font-size : 4em;
+        animation : translate2 3s infinite;   
+    }
+
+    @keyframes translate1{
+        0% { opacity : 0; transform: translate(-16px, 0); }
+        20% { opacity : 1; transform: translate(0, 0); }
+        65% { opacity : 1; transform: translate(0, 0); }
+        80% { opacity : 0; transform: translate(16px, 0); }
+        100% { opacity : 0; transform: translate(16px, 0); }
+    }
+    @keyframes translate2{
+        0% { opacity : 0; transform: translate(-32px, 0); }
+        18% { opacity : 1; transform: translate(0, 0); }
+        64% { opacity : 1; transform: translate(0, 0); }
+        82% { opacity : 0; transform: translate(32px, 0); }
+        100% { opacity : 0; transform: translate(32px, 0); }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I'm lovin' it! </h1>
+        <h2>- McDonald's -</h2>
+    </header>
+    <p class="f"> By <a class="gradient" target="_blank"  href="https://tincochan.github.io/">@Tinc0</a></p>
+</body>    
+</body>>
+</html>
