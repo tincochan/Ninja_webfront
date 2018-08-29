@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <style type="text/css"> 
+    html,body {
+        background-color: rgb(10, 1, 10); 
+        background-image: linear-gradient(0deg, #3c034a, #1c1045);
+        height: 100%;
+        overflow: hidden;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: center;
+    }
+
+    .center {
+        margin: 0 auto;
+    }
+
+    .outer-ring {
+        position: absolute;
+        left: calc(50% - 150px);
+        height: 300px;
+        width: 300px;
+        background-image: linear-gradient(13deg, #FEED07 40%, #FE6A50 70%, rgb(0, 237, 51) 45%, rgb(241, 177, 56) 30%, 
+        rgba(9, 187, 24, 0.746) 40%);
+        border-radius: 50%;
+                
+    /*  Rotate  */
+    animation-duration: 2s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    }
+
+    .inner-ring {
+        position: absolute;
+        left: calc(50% - 140px);
+        height: 280px;
+        width: 280px;
+        background-image: linear-gradient(0deg, #36295e, #1c1045);
+        border-radius: 50%;
+    }
+
+    @keyframes rotate {
+        0% {transform:rotate(0deg);}
+        100% {transform:rotate(360deg);}
+    }
+    </style>
+</head>
+<body>
+    <div class="outer-ring center"></div>
+    <div class="inner-ring center"></div>
+</body>
+</html>
