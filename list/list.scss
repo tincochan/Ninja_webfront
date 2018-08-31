@@ -1,0 +1,128 @@
+$bg-form: url(https://static.pexels.com/photos/131230/pexels-photo-131230.jpeg);
+$selection-color: rgba(47, 79, 79, .8);$blur: 4px;
+$hue-rotate: 60deg;
+
+$form-w: 400px;
+$form-h: 400px;
+$form-gradient-1: rgba(106, 90, 205, .2);
+$form-gradient-2: rgba(47, 79, 79, .4);
+
+$color-text: #fff;
+$bg-title: rgba(0, 128, 128, .6);
+$color-title: #FFFAFA;
+
+
+@mixin center() {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%text {
+	font-size: 45px;
+	line-height: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	background: $bg-title;
+	color: $color-title;
+	mix-blend-mode: multiply;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+.container {
+	@include center;
+	width: 100%;
+	min-height: 100%;
+	font-family: raleway, sans-serif;
+	background: #2e2e2e;
+	margin: 0;
+	padding: 0;
+	//margin-top: calc( 50vh - 200px );
+	overflow: hidden;
+	
+	&-bg {
+		//position: absolute;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: $bg-form center center no-repeat {
+				size: cover;
+			};
+		filter: blur($blur) hue-rotate($hue-rotate);
+	}
+}
+
+form {
+	position: relative;
+	width: $form-w;
+	min-height: $form-h;
+	background: linear-gradient(to bottom, $form-gradient-1 0%, $form-gradient-2 65%);
+	color: $color-text;
+	
+	.title {
+		@extend %text;
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.checkbox {
+	position:relative;
+	padding-left: 57px;
+	margin-bottom: 20px;
+}
+
+.checkbox input[type=checkbox] {
+	display:none;
+}
+
+.checkbox label:after {
+	content:'';
+	display:block;
+	height: 26px;
+	width: 26px;
+	border: 2px solid rgba(0, 128, 128, .6);
+	background: transparent;
+	cursor: pointer;
+	//outline:1px solid #939598;
+	outline: none;
+	position:absolute;
+	top:0;
+	left: 20px;
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+	//outline:1px solid #939598;
+	outline: 0;
+	//border:2px solid #fff;
+	background-color: rgba(0, 128, 128, .4);
+}
+
+label {
+	vertical-align: middle;
+	line-height: 26px;
+}
+
+input[type="submit"] {
+	@extend %text;
+	width: 100%;
+	padding: 10px;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+::selection{
+  background: $selection-color;
+}
