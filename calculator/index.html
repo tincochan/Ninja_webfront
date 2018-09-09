@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Betül</title>
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="calculator" class="calc">
+  <div class="op-area">
+    <span> nothing  </span>
+  </div>
+  <div id="result" class="result-area">
+    <span>{{ valueDisplayed }}</span>
+  </div>
+  <div class="main">
+    <button class="element" @click="clear">C</button>
+    <button class="element" @click="handleOp('+/-')">+/-</button>
+    <button class="element" @click="handleOp('%')">%</button>
+    <button class="element" @click="handleOp('/')">/</button>
+    <button class="element" @click="handleDigit(7)">7</button>
+    <button class="element" @click="handleDigit(8)">8</button>
+    <button class="element" @click="handleDigit(9)">9</button>
+    <button class="element" @click="handleOp('x')">x</button>
+    <button class="element" @click="handleDigit(4)">4</button>
+    <button class="element" @click="handleDigit(5)">5</button>
+    <button class="element" @click="handleDigit(6)">6</button>
+    <button class="element" @click="handleOp('-')">-</button>
+    <button class="element" @click="handleDigit(1)">1</button>
+    <button class="element" @click="handleDigit(2)">2</button>
+    <button class="element" @click="handleDigit(3)">3</button>
+    <button class="element" @click="handleOp('+')">+</button>
+    <button class="element zero" @click="handleDigit(0)">0</button>
+    <button class="element" @click="handleOp(',')">,</button>
+    <button class="element equal" @click="handleOp('=')">=</button>
+    
+
+
+    
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
