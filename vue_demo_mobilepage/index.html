@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>vue test utils & mocha & chai</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mocha/2.2.5/mocha.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h1><code>vue demo mobilepage</code> </br> 
+with <code>mocha</code> and <code>chai</code></h1>
+<div class="container">
+  <div id="vue">
+    <div id="demo">
+      <form id="search">
+        <input name="query" v-model="searchQuery"> Search
+      </form>
+      <demo-grid :data="gridData" :columns="gridColumns" :filter-key="searchQuery">
+      </demo-grid>
+    </div>
+  </div>
+  <div id="mocha"></div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mocha/2.2.5/mocha.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/chai/2.3.0/chai.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js'></script>
+<script src='js/mpwvgl.js'></script>
+<script src='js/rxgymr.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
