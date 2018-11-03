@@ -1,0 +1,41 @@
+$base: 20px;
+@mixin flex($property) {
+	-webkit-box-flex: $property;
+					-ms-flex: $property;
+							flex: $property;
+}
+body {
+	padding: $base * 2;
+	background: url(https://raw.githubusercontent.com/flowuhh/image-host/master/splatoonBackground.png) repeat left;
+	text-align: center;
+	display: flex;
+		flex-direction: row;
+	-webkit-flex-flow: row wrap;
+}
+button {
+	@include flex(1);
+	font-size: $base * 1.5;
+	padding: $base $base * 2;
+	margin: $base;
+	border-radius: $base * 3;
+	border: $base * 0.4 solid #fa5a00;
+	color: white;
+	background-color: transparent;
+	line-height: 1;
+	font-family: 'Jua', sans-serif;
+	box-sizing: border-box;
+	cursor: pointer;
+	white-space: nowrap;
+	background-image: url(https://raw.githubusercontent.com/flowuhh/image-host/master/splatoonWave.png);
+	background-repeat: repeat-x;
+	background-position: 0 -100%;
+	transition: 2s ease;
+	&:hover {
+		background-position: -250% 100%;
+	}
+	@for $button from 1 through 36 {
+		&:nth-of-type(#{$button}) {
+			filter: hue-rotate($button * 10 + deg);
+		}
+	}
+}
